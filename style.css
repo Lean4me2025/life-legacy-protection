@@ -1,94 +1,146 @@
 body {
     margin: 0;
-    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #FAFAF7;
+    background-color: #F8F9FB;
     color: #2F3A45;
 }
 
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px 20px;
-}
-
 .hero {
+    background: linear-gradient(135deg, #0F2A44, #1F4A73);
+    color: white;
+    padding: 100px 20px 80px;
     text-align: center;
-    padding-top: 60px;
-    padding-bottom: 60px;
 }
 
 .hero h1 {
-    font-size: 56px;
-    color: #16324F;
+    font-size: 60px;
     margin-bottom: 10px;
+    color: white;
+    letter-spacing: 1px;
 }
 
 .subtitle {
     font-size: 24px;
-    color: #5D7793;
-    margin-bottom: 40px;
+    color: #D4AF37;
+    margin-bottom: 30px;
+    font-weight: bold;
 }
 
 .welcome-text {
-    font-size: 20px;
-    line-height: 1.7;
     max-width: 800px;
     margin: 20px auto;
+    font-size: 20px;
+    line-height: 1.7;
+    color: #EAF2F8;
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 18px;
+    margin: 35px auto;
+    max-width: 750px;
+    color: #D4AF37;
+}
+
+.container {
+    max-width: 1050px;
+    margin: -50px auto 50px;
+    padding: 20px;
 }
 
 .intro-list {
     list-style: none;
     padding: 0;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin: 0 auto;
 }
 
 .intro-list li {
-    background-color: #EAF2F8;
-    margin: 15px auto;
-    padding: 18px;
-    border-radius: 10px;
-    max-width: 400px;
-    font-size: 20px;
+    background: white;
+    margin: 22px auto;
+    padding: 26px;
+    border-radius: 14px;
+    max-width: 650px;
+    font-size: 19px;
+    line-height: 1.6;
+    border-left: 7px solid #D4AF37;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+}
+
+.intro-list strong {
+    color: #16324F;
+    font-size: 22px;
 }
 
 .start-button {
-    background-color: #16324F;
+    margin-top: 35px;
+    background: linear-gradient(135deg, #D4AF37, #B8962E);
     color: white;
     border: none;
-    padding: 18px 40px;
+    padding: 18px 44px;
     font-size: 18px;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: 0.3s;
+    font-weight: bold;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.22);
 }
 
 .start-button:hover {
-    background-color: #5D7793;
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #B8962E, #9C7C24);
+}
+
+.micro-note {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #D4AF37;
 }
 
 .trust-section {
-    background-color: white;
+    background: white;
     padding: 50px;
-    border-radius: 12px;
-    margin-top: 60px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    border-radius: 14px;
+    margin-top: 50px;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    border-top: 5px solid #16324F;
 }
 
 .trust-section h2 {
     color: #16324F;
-    margin-bottom: 25px;
-    text-align: center;
+    margin-bottom: 20px;
 }
 
 .trust-section p {
     font-size: 18px;
     line-height: 1.7;
+}
+
+.promise-section {
+    background: #0F2A44;
+    color: white;
+    padding: 60px 40px;
+    border-radius: 14px;
+    margin-top: 50px;
     text-align: center;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.16);
+}
+
+.promise-section h2 {
+    color: #D4AF37;
+    margin-bottom: 20px;
+}
+
+.promise-section p {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 850px;
+    margin: 18px auto;
 }
 
 @media (max-width: 768px) {
+    .hero {
+        padding: 75px 20px 60px;
+    }
 
     .hero h1 {
         font-size: 40px;
@@ -102,11 +154,11 @@ body {
         font-size: 18px;
     }
 
-    .intro-list li {
-        font-size: 18px;
+    .container {
+        margin-top: -35px;
     }
 
-    .trust-section {
-        padding: 30px;
+    .intro-list li {
+        font-size: 17px;
+        padding: 22px;
     }
-}
