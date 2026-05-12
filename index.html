@@ -2,95 +2,191 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Life. Legacy. Protection.</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Life & Legacy Review | e-legalboom.com</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f3e8;
+      color: #0b1f35;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 35px;
+      margin-bottom: 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    .age-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .age-btn {
+      padding: 16px;
+      border: 2px solid #0b1f35;
+      background: #ffffff;
+      color: #0b1f35;
+      font-weight: bold;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .age-btn.selected {
+      background: #0b1f35;
+      color: #f4b23b;
+      border-color: #f4b23b;
+    }
+
+    select {
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .dark-card {
+      background: #071d33;
+      color: #ffffff;
+      border-radius: 18px;
+      padding: 45px 25px;
+      text-align: center;
+    }
+
+    .gold {
+      color: #f4b23b;
+    }
+
+    .continue-btn {
+      margin-top: 30px;
+      padding: 16px 42px;
+      border: 2px solid #f4b23b;
+      background: #071d33;
+      color: #f4b23b;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .continue-btn:hover {
+      background: #f4b23b;
+      color: #071d33;
+    }
+
+    .message {
+      margin-top: 18px;
+      font-weight: bold;
+      color: #b00020;
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
+  <main class="page">
 
-  <section class="hero">
-    <h1>Life. Legacy. Protection.</h1>
-
-    <p class="subtitle">
-      Protect What Matters Before Crisis Arrives.
-    </p>
-
-    <p class="welcome-text">
-      Many people move through life without realizing where they may be exposed — until an emergency,
-      loss, expense, or unexpected event changes everything.
-    </p>
-
-    <p class="welcome-text">
-      This readiness review helps you see where you stand today and where you may want to strengthen your foundation.
-    </p>
-  </section>
-
-  <main class="container">
-
-    <ul class="intro-list">
-
-      <li>
-        <strong>Life Stability</strong>
-        Income, savings, investing, retirement planning, housing, transportation, and the everyday
-        resources that help you stay steady through life’s challenges.
-      </li>
-
-      <li>
-        <strong>Family Provision</strong>
-        Planning that helps your family continue forward, including emergency savings,
-        beneficiaries, important documents, family instructions, and future support.
-      </li>
-
-      <li>
-        <strong>Protection Readiness</strong>
-        Insurance, warranties, legal safeguards, cyber/data protection, emergency plans,
-        and other coverage that helps reduce loss, confusion, and unexpected expense.
-      </li>
-
-    </ul>
-
-    <!-- THIS IS THE FIX -->
-    <a href="assessment.html" class="start-button">
-      Start My Life & Legacy Review
-    </a>
-
-    <p class="micro-note">
-      Takes about 2 minutes. No pressure. Your information stays yours.
-    </p>
-
-    <section class="trust-section">
-      <h2>Our Commitment to You</h2>
-
-      <p>Your information belongs to you.</p>
-
-      <p>
-        We do not sell, trade, or transfer your personal information without your knowledge and consent.
-      </p>
-
-      <p>
-        Protection begins with trust.
-      </p>
+    <section class="card">
+      <h1>Life & Legacy Review</h1>
+      <p>Select your age group and state of residence so we can guide your review.</p>
     </section>
 
-    <section class="promise-section">
-      <h2>Our Value Promise</h2>
+    <section class="card">
+      <h2>Step 1: Select Your Age Group</h2>
 
-      <p>
-        We are not here to pressure you or sell you something you don’t need.
-      </p>
+      <div class="age-grid">
+        <button class="age-btn" data-age="18-29">18–29</button>
+        <button class="age-btn" data-age="30-44">30–44</button>
+        <button class="age-btn" data-age="45-59">45–59</button>
+        <button class="age-btn" data-age="60-74">60–74</button>
+        <button class="age-btn" data-age="75+">75+</button>
+      </div>
+    </section>
 
-      <p>
-        We help you identify gaps, understand your exposure, and give you clear next steps —
-        whether you act now or later.
-      </p>
+    <section class="card">
+      <h2>Step 2: State of Residence</h2>
+      <p>Your location helps us understand what guidance or licensed support may be available.</p>
 
-      <p>
-        You stay in control of your decisions at all times.
-      </p>
+      <label for="stateSelect">Select your state</label>
+      <select id="stateSelect">
+        <option value="">Choose state</option>
+        <option value="California">California</option>
+        <option value="Florida">Florida</option>
+        <option value="Virginia">Virginia</option>
+        <option value="Texas">Texas</option>
+        <option value="New York">New York</option>
+        <option value="Other">Other / Not listed</option>
+      </select>
+    </section>
+
+    <section class="dark-card">
+      <h2 class="gold">Next: Your Readiness Questions</h2>
+      <p>After this, we will ask simple questions about Life Stability, Family Provision, and Protection Readiness.</p>
+      <p>You will be able to mark each area as Covered, Unsure, or Need Help.</p>
+
+      <button class="continue-btn" id="continueBtn">
+        Continue to My Review
+      </button>
+
+      <div class="message" id="message">
+        Please select your age group and state first.
+      </div>
     </section>
 
   </main>
 
+  <script>
+    let selectedAgeGroup = "";
+
+    const ageButtons = document.querySelectorAll(".age-btn");
+    const stateSelect = document.getElementById("stateSelect");
+    const continueBtn = document.getElementById("continueBtn");
+    const message = document.getElementById("message");
+
+    ageButtons.forEach(button => {
+      button.addEventListener("click", function () {
+        ageButtons.forEach(btn => btn.classList.remove("selected"));
+        this.classList.add("selected");
+
+        selectedAgeGroup = this.dataset.age;
+        localStorage.setItem("legacy_age_group", selectedAgeGroup);
+
+        message.style.display = "none";
+      });
+    });
+
+    stateSelect.addEventListener("change", function () {
+      localStorage.setItem("legacy_state", this.value);
+      message.style.display = "none";
+    });
+
+    continueBtn.addEventListener("click", function () {
+      const selectedState = stateSelect.value;
+
+      if (!selectedAgeGroup || !selectedState) {
+        message.style.display = "block";
+        return;
+      }
+
+      window.location.href = "life-legacy-review.html";
+    });
+  </script>
 </body>
 </html>
