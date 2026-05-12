@@ -8,13 +8,13 @@ body {
 .hero {
     background: linear-gradient(135deg, #0F2A44, #1F4A73);
     color: white;
-    padding: 100px 20px 80px;
+    padding: 110px 20px 90px;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 60px;
-    margin-bottom: 10px;
+    font-size: 58px;
+    margin: 0 0 20px;
     color: white;
     letter-spacing: 1px;
 }
@@ -22,13 +22,13 @@ body {
 .subtitle {
     font-size: 24px;
     color: #D4AF37;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     font-weight: bold;
 }
 
 .welcome-text {
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 850px;
+    margin: 22px auto;
     font-size: 20px;
     line-height: 1.7;
     color: #EAF2F8;
@@ -44,35 +44,39 @@ body {
 
 .container {
     max-width: 1050px;
-    margin: -50px auto 50px;
-    padding: 20px;
+    margin: 0 auto 50px;
+    padding: 30px 20px;
 }
 
 .intro-list {
     list-style: none;
     padding: 0;
-    margin: 0 auto;
+    margin: 45px auto 0;
 }
 
 .intro-list li {
-    background: white;
-    margin: 22px auto;
-    padding: 26px;
+    background: #FFFFFF;
+    margin: 24px auto;
+    padding: 28px;
     border-radius: 14px;
-    max-width: 650px;
+    max-width: 700px;
     font-size: 19px;
     line-height: 1.6;
-    border-left: 7px solid #D4AF37;
-    box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+    color: #2F3A45;
+    border-left: 8px solid #D4AF37;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
 }
 
 .intro-list strong {
+    display: block;
     color: #16324F;
-    font-size: 22px;
+    font-size: 24px;
+    margin-bottom: 8px;
 }
 
 .start-button {
-    margin-top: 35px;
+    display: block;
+    margin: 45px auto 0;
     background: linear-gradient(135deg, #D4AF37, #B8962E);
     color: white;
     border: none;
@@ -93,6 +97,7 @@ body {
     margin-top: 15px;
     font-size: 14px;
     color: #D4AF37;
+    text-align: center;
 }
 
 .trust-section {
@@ -139,7 +144,7 @@ body {
 
 @media (max-width: 768px) {
     .hero {
-        padding: 75px 20px 60px;
+        padding: 80px 20px 70px;
     }
 
     .hero h1 {
@@ -152,10 +157,6 @@ body {
 
     .welcome-text {
         font-size: 18px;
-    }
-
-    .container {
-        margin-top: -35px;
     }
 
     .intro-list li {
