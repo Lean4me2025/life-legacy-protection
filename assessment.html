@@ -78,6 +78,38 @@
     </section>
 
   </main>
+<script>
+  let selectedAge = "";
 
+  const ageButtons = document.querySelectorAll(".choice-button");
+  const stateSelect = document.getElementById("state");
+  const startButton = document.querySelector(".start-button");
+
+  // Handle age selection
+  ageButtons.forEach(button => {
+    button.addEventListener("click", function () {
+      ageButtons.forEach(btn => btn.classList.remove("selected"));
+      this.classList.add("selected");
+
+      selectedAge = this.textContent.trim();
+      localStorage.setItem("legacy_age_group", selectedAge);
+    });
+  });
+
+  // Handle continue button
+  startButton.addEventListener("click", function () {
+    const state = stateSelect.value;
+
+    if (!selectedAge || !state) {
+      alert("Please select your age group and state first.");
+      return;
+    }
+
+    localStorage.setItem("legacy_state", state);
+
+    // IMPORTANT: This must match your actual file
+    window.location.href = "assessment.html";
+  });
+</script>
 </body>
 </html>
