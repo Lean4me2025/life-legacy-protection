@@ -6,30 +6,76 @@
   <title>Life & Legacy Review | e-legalboom.com</title>
 
   <style>
+    :root {
+      --navy: #071d33;
+      --deep-navy: #041525;
+      --gold: #f4b23b;
+      --cream: #f7f3e8;
+      --white: #ffffff;
+      --text: #0b1f35;
+      --soft-border: #eadfca;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f7f3e8;
-      color: #0b1f35;
+      background: linear-gradient(180deg, #fffaf0 0%, var(--cream) 100%);
+      color: var(--text);
     }
 
     .page {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 42px 20px 60px;
+    }
+
+    .hero {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 22px;
+      padding: 46px 28px;
+      margin-bottom: 32px;
+      text-align: center;
+      box-shadow: 0 14px 34px rgba(0,0,0,0.16);
+      border: 2px solid var(--gold);
+    }
+
+    .hero h1 {
+      margin: 0 0 14px;
+      font-size: clamp(32px, 5vw, 52px);
+      color: var(--gold);
+      letter-spacing: 0.5px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 18px;
+      line-height: 1.6;
     }
 
     .card {
-      background: #ffffff;
+      background: var(--white);
       border-radius: 18px;
-      padding: 35px;
-      margin-bottom: 35px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      padding: 34px;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.08);
       text-align: center;
+      border: 1px solid var(--soft-border);
     }
 
-    h1, h2 {
+    h2 {
       margin-top: 0;
+      color: var(--navy);
+      font-size: 26px;
+    }
+
+    p {
+      line-height: 1.55;
     }
 
     .age-grid {
@@ -40,61 +86,84 @@
     }
 
     .age-btn {
-      padding: 16px;
-      border: 2px solid #0b1f35;
-      background: #ffffff;
-      color: #0b1f35;
+      padding: 17px;
+      border: 2px solid var(--navy);
+      background: #fffaf0;
+      color: var(--navy);
       font-weight: bold;
-      border-radius: 12px;
+      border-radius: 14px;
       cursor: pointer;
       font-size: 16px;
+      transition: all 0.2s ease;
+    }
+
+    .age-btn:hover {
+      transform: translateY(-2px);
+      border-color: var(--gold);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
     }
 
     .age-btn.selected {
-      background: #0b1f35;
-      color: #f4b23b;
-      border-color: #f4b23b;
+      background: var(--navy);
+      color: var(--gold);
+      border-color: var(--gold);
+      box-shadow: 0 8px 22px rgba(7,29,51,0.28);
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: var(--navy);
     }
 
     select {
-      padding: 8px 12px;
-      border-radius: 6px;
+      width: min(360px, 100%);
+      padding: 13px 14px;
+      border-radius: 10px;
       font-size: 16px;
+      border: 2px solid var(--navy);
+      background: #fffaf0;
+      color: var(--navy);
     }
 
     .dark-card {
-      background: #071d33;
-      color: #ffffff;
-      border-radius: 18px;
-      padding: 45px 25px;
+      background: var(--deep-navy);
+      color: var(--white);
+      border-radius: 22px;
+      padding: 44px 25px;
       text-align: center;
+      border: 2px solid var(--gold);
+      box-shadow: 0 14px 34px rgba(0,0,0,0.18);
     }
 
     .gold {
-      color: #f4b23b;
+      color: var(--gold);
     }
 
     .continue-btn {
       margin-top: 30px;
-      padding: 16px 42px;
-      border: 2px solid #f4b23b;
-      background: #071d33;
-      color: #f4b23b;
+      padding: 17px 44px;
+      border: 2px solid var(--gold);
+      background: var(--gold);
+      color: var(--deep-navy);
       font-size: 18px;
       font-weight: bold;
-      border-radius: 12px;
+      border-radius: 14px;
       cursor: pointer;
+      transition: all 0.2s ease;
     }
 
     .continue-btn:hover {
-      background: #f4b23b;
-      color: #071d33;
+      background: transparent;
+      color: var(--gold);
+      transform: translateY(-2px);
     }
 
     .message {
       margin-top: 18px;
       font-weight: bold;
-      color: #b00020;
+      color: #ffd27a;
       display: none;
     }
   </style>
@@ -103,13 +172,17 @@
 <body>
   <main class="page">
 
-    <section class="card">
+    <section class="hero">
       <h1>Life & Legacy Review</h1>
-      <p>Select your age group and state of residence so we can guide your review.</p>
+      <p>
+        A guided readiness check to help you think through life stability,
+        family provision, protection planning, and legacy preparation.
+      </p>
     </section>
 
     <section class="card">
       <h2>Step 1: Select Your Age Group</h2>
+      <p>Choose the range that best fits where you are right now.</p>
 
       <div class="age-grid">
         <button class="age-btn" data-age="18-29">18–29</button>
